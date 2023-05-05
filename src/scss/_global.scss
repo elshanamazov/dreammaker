@@ -63,6 +63,27 @@ a {
   }
 }
 
+.br-visible {
+  @media (max-width: $breakpoint768) {
+    display: none;
+  }
+}
+
+.title {
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  text-align: center;
+  margin: 0;
+  color: $primaryColor;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+  }
+}
+
 .desc {
   font-family: $fontMain;
   font-style: normal;

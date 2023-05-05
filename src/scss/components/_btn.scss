@@ -10,16 +10,18 @@
   padding: 16px 66px;
   background: $btnColor;
   border-radius: 10px;
+  transition: background 0.3s;
 
-	&:focus {
+  &:focus {
+    outline: none;
+    background: $hoverColorDarker;
+  }
 
-	}
+  &:hover {
+    background: $hoverColor;
+  }
 
-	&:hover {
-
-	}
-
-	&:active {
-		
-	}
+  &:active {
+    background: $hoverColorDarker;
+  }
 }
