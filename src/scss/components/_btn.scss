@@ -1,0 +1,25 @@
+.btn {
+  font-family: $fontMain;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $lightColor;
+  flex-shrink: 0;
+
+  padding: 16px 66px;
+  background: $btnColor;
+  border-radius: 10px;
+
+	&:focus {
+
+	}
+
+	&:hover {
+
+	}
+
+	&:active {
+		
+	}
+}

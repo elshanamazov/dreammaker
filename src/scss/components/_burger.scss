@@ -1,0 +1,76 @@
+.burger {
+  --burger-width: 30px;
+  --burger-height: 22px;
+  --burger-line-height: 2px;
+  display: none;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  @media (max-width: $breakpoint992) {
+    display: flex;
+    z-index: 55;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    height: var(--burger-line-height);
+    background-color: #505050;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    border-radius: 5px;
+    background-color: #505050;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      background-color: $lightColor;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      background-color: $lightColor;
+    }
+
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

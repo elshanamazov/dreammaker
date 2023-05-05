@@ -1,0 +1,13 @@
+// Global SCSS-files imports
+@import './normalize';
+@import './vars';
+@import './global';
+
+// Sections or Pages SCSS-files imports
+@import './components/burger';
+@import './components/btn';
+@import './components/header';
+@import './components/hero';
+
+// Libs
+// @import './libs/swiper';

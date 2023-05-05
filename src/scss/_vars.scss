@@ -1,0 +1,27 @@
+@use 'sass:math';
+$containerWidth: 1110;
+$containerPadding: 32;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+
+$primaryColor: #626780;
+$secondaryColor: #717784;
+$secondaryColorOpacity: rgba(113, 119, 132, 0.95);
+$thirdColor: #402b2b;
+$textColor: #00c3d0;
+$textColorActive: #008891;
+$btnColor: #9b9bca;
+$hoverColor: #f01f35;
+$darkColor: #000000;
+$lightColor: #ffffff;
+
+// Fonts
+
+$fontMain: 'Poppins', sans-serif;
+$formFont: 'Rubik', sans-serif;
+$mainTitleFont: 'DM Serif Display', serif;
+$subTitleFont: 'PT Serif', serif;
