@@ -1,0 +1,83 @@
+.login {
+  padding-top: 100px;
+  padding-bottom: 65px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+}
+
+.form {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.4);
+  border-radius: 10px;
+  padding: 100px 150px;
+  max-width: 710px;
+  margin: 0 auto;
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    background: #ffffff;
+    outline: 1px solid $btnColor;
+    border-radius: 5px;
+    padding: 11px 40px;
+    transition: outline 0.1s, box-shadow 0.1s, border-radius 0.1s;
+    color: $btnColorHover;
+    &::placeholder {
+      color: $greyColor;
+    }
+
+    &:focus {
+      outline: 2px solid $btnColor;
+      box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
+      border-radius: 10px;
+
+      &::placeholder {
+        color: $btnColorHover;
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 220px;
+    margin-bottom: 30px;
+  }
+
+  &__account {
+    display: flex;
+  }
+
+  &__link {
+    font-weight: 500;
+    margin-left: 10px;
+    color: $btnColorSecondary;
+    &:hover {
+      color: $btnColorSecondaryHover;
+    }
+  }
+
+  &__validate {
+    display: none;
+    color: $btnColorSecondary;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}

@@ -3,6 +3,9 @@
 @import './vars';
 @import './global';
 
+//Libs
+@import './libs/swiper';
+
 // Sections or Pages SCSS-files imports
 @import './components/burger';
 @import './components/btn';
@@ -10,6 +13,9 @@
 @import './components/hero';
 @import './components/_service';
 @import './components/support';
-
-// Libs
-// @import './libs/swiper';
+@import './components/demo';
+@import './components/faq';
+@import './components/accordion';
+@import './components/features';
+@import './components/review';
+@import './components/login';

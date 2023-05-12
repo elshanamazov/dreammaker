@@ -10,18 +10,34 @@
   padding: 16px 66px;
   background: $btnColor;
   border-radius: 10px;
-  transition: background 0.3s;
+  border: 1px solid transparent;
+  transition: background 0.5s;
 
   &:focus {
     outline: none;
-    background: $hoverColorDarker;
+    background: $btnColorHover;
   }
 
   &:hover {
-    background: $hoverColor;
+    background: $btnColorHover;
   }
 
   &:active {
-    background: $hoverColorDarker;
+    background-color: $btnColor;
+  }
+
+  &--red {
+    background: $btnColorSecondary;
+
+    &:focus {
+      background: $btnColorSecondaryHover;
+    }
+    &:hover {
+      background: $btnColorSecondaryHover;
+    }
+
+    &:active {
+      background: $btnColorSecondary;
+    }
   }
 }

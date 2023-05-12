@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+.site-container {
+  overflow: hidden;
+}
+
 .btn-reset {
   border: none;
   padding: 0;
@@ -84,6 +88,17 @@ a {
   }
 }
 
+.second-title {
+  font-family: $subTitleFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 140%;
+  color: $thirdColor;
+  max-width: 550px;
+  margin: 0;
+}
+
 .desc {
   font-family: $fontMain;
   font-style: normal;
@@ -119,6 +134,20 @@ a {
 }
 
 // Animations
+
+// move
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 // Fade
 @keyframes fade {
   0% {
