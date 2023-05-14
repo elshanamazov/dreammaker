@@ -2150,6 +2150,7 @@ button.swiper-pagination-bullet {
   padding: 100px 150px;
   max-width: 710px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .form__fieldset {
@@ -2221,6 +2222,9 @@ button.swiper-pagination-bullet {
   -webkit-box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
           box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
   border-radius: 10px;
+  -webkit-transition: outline 0.4s;
+  -o-transition: outline 0.4s;
+  transition: outline 0.4s;
 }
 
 .form__input:focus::-webkit-input-placeholder {
@@ -2241,6 +2245,10 @@ button.swiper-pagination-bullet {
 
 .form__input:focus::placeholder {
   color: #7070b0;
+}
+
+.form__input._error {
+  outline: 2px solid #f01f35;
 }
 
 .form__btn {
@@ -2265,10 +2273,31 @@ button.swiper-pagination-bullet {
 }
 
 .form__validate {
-  display: none;
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 0;
   color: #f01f35;
   font-size: 14px;
   padding: 10px 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.form__validate._show {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-appearance: initial;
+     -moz-appearance: initial;
+          appearance: initial;
+  height: auto;
 }
 
 @media (max-width: 991.98px) {
