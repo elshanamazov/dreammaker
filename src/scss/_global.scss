@@ -135,19 +135,6 @@ a {
 
 // Animations
 
-// move
-
-@keyframes pulse {
-  0% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 // Fade
 @keyframes fade {
   0% {

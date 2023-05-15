@@ -40,12 +40,14 @@
     display: block;
     width: 170%;
     z-index: -1;
-    animation: pulse 3s infinite;
   }
 
   &__btn {
     min-width: 550px;
     margin: 0 auto;
     text-transform: uppercase;
+    &._hidden {
+      display: none;
+    }
   }
 }

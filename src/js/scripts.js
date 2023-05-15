@@ -3,3 +3,4 @@
 @@include('accrodion.js')
 @@include('slider.js')
 @@include('form.js')
+@@include('showmore.js')

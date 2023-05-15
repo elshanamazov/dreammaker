@@ -6,6 +6,9 @@
       margin-bottom: 12px;
     }
 
+    &._hidden {
+      display: none;
+    }
     // Active state styles
     &-active {
       .accordion__content {

@@ -495,40 +495,6 @@ a {
   padding: 0 16px;
 }
 
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -1822,14 +1788,16 @@ button.swiper-pagination-bullet {
   display: block;
   width: 170%;
   z-index: -1;
-  -webkit-animation: pulse 3s infinite;
-          animation: pulse 3s infinite;
 }
 
 .faq__btn {
   min-width: 550px;
   margin: 0 auto;
   text-transform: uppercase;
+}
+
+.faq__btn._hidden {
+  display: none;
 }
 
 .accordion__item {
@@ -1840,6 +1808,10 @@ button.swiper-pagination-bullet {
 
 .accordion__item:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.accordion__item._hidden {
+  display: none;
 }
 
 .accordion__item-active .accordion__content {
