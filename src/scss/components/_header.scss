@@ -96,7 +96,8 @@
     }
 
     &:hover {
-      color: $textColor;
+      // color: $textColor;
+      color: $btnColorHover;
     }
 
     &:active {

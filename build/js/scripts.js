@@ -78,16 +78,20 @@ const swiper = new Swiper('.review-slider', {
 
 (function () {
   const form = document.querySelector('.js-form');
+  const val_password = new RegExp(/^[0-9a-zA-Z]{4,12}$/);
+
+  let inputName = document.querySelector('.js-name');
+  let inputPassword = document.querySelector('.js-password');
+  let formInputs = document.querySelectorAll('.js-input');
+  let validateFormDom = [...document.querySelectorAll('.form__validate')];
 
   const handleForm = (event) => {
     event.preventDefault();
-    let formInputs = document.querySelectorAll('.js-input');
-    let inputName = document.querySelector('.js-name');
-    let inputPassword = document.querySelector('.js-password');
-    let validateForm = document.querySelectorAll('.form__validate');
-    const val_password = new RegExp(/^[0-9a-zA-Z]{4,12}$/);
+    validateForm();
+  };
+
+  function validateForm() {
     const inputNameVal = inputName.value.toLowerCase();
-    const validateFormDom = [...validateForm];
 
     formInputs.forEach((input) => {
       if (input.value === '') {
@@ -105,14 +109,14 @@ const swiper = new Swiper('.review-slider', {
       validateFormDom[0].classList.remove('_show');
     }
 
-    if (!val_password.test(password.value)) {
+    if (!val_password.test(inputPassword.value)) {
       inputPassword.classList.add('_error');
       validateFormDom[1].classList.add('_show');
     } else {
       inputPassword.classList.remove('_error');
       validateFormDom[1].classList.remove('_show');
     }
-  };
+  }
 
   form.addEventListener('submit', handleForm);
 })();

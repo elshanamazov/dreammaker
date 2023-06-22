@@ -20,9 +20,8 @@
 
   &__item {
     background: $lightColor;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 1px solid $greyColor;
+    border: 1px solid $lightGrey;
     padding: 60px 50px 0 60px;
     display: flex;
     flex-direction: column;
@@ -30,6 +29,7 @@
     width: 100%;
   }
 
+	
   &__pic {
     width: 339px;
     height: 149px;

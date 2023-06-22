@@ -2,6 +2,24 @@
   padding-top: 165px;
   padding-bottom: 65px;
 
+  &__container {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    margin-top: -780px;
+    left: -200px;
+    height: 1400px;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  &__womanbg {
+    position: relative;
+    margin-top: -550px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -31,9 +49,8 @@
 
     &__item {
       background: $lightColor;
-      box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
       border-radius: 10px;
-      // max-width: 488px;
+      border: 1px solid $ThinGrey;
       padding: 60px 30px 30px 30px;
       position: relative;
       z-index: 2;
